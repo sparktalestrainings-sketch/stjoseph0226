@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chatbot</title>
+  <style>
+    body { font-family: Arial; background:#f2f2f2; }
+    #chatbox {
+      width: 400px; margin: 40px auto; background:#fff;
+      padding:20px; border-radius:10px;
+      height: 500px; overflow-y: auto; box-shadow:0 0 10px #ccc;
+    }
+    .msg { margin:10px 0; padding:10px; border-radius:5px; }
+    .user { background:#d1f8d1; text-align:right; }
+    .bot { background:#e8e8ff; text-align:left; }
+    #inputBox {
+      width:400px; margin:10px auto; display:flex;
+    }
+    input {
+      flex:1; padding:10px; border-radius:5px; border:1px solid #aaa;
+    }
+    button {
+      padding:10px 20px; margin-left:10px; 
+      background:#007bff; color:#fff; border:none; border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chatbox"></div>
+
+<div id="inputBox">
+  <input id="msg" placeholder="Type your message">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+async function sendMessage() {
+  let text = document.getElementById("msg").value;
+  if (!text) return;
+
+  // show user message
+  addMessage(text, "user");
+  document.getElementById("msg").value = "";
+
+  // call OpenAI API
+  const response = await fetch("https://api.groq.com/openai/v1", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "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"
+    },
+    body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [{ role: "user", content: text }]
+    })
+  });
+
+  const data = await response.json();
+  const reply = data.choices[0].message.content;
+
+  addMessage(reply, "bot");
+}
+
+function addMessage(msg, type) {
+  let box = document.getElementById("chatbox");
+  let div = document.createElement("div");
+  div.className = "msg " + type;
+  div.innerText = msg;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+</script>
+
+</body>
+</html>
