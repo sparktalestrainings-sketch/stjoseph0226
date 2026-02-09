@@ -1,0 +1,48 @@
+If you want to setup other than OPENAI API as listed in step 4 note: follow as below
+1. Google Gemini (Native SDK)
+The google-genai library is the official way to use Gemini models directly. 
+•	Install: pip install -q -U google-genai
+•	Code:
+from google import genai
+client = genai.Client(api_key="YOUR_GEMINI_API_KEY")
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents="Explain quantum physics to a five-year-old."
+)
+print(response.text)
+
+2. Groq (Native SDK)
+Groq provides a dedicated library that is optimized for their high-speed inference engine. 
+•	Install: pip install groq
+•	Code:
+from groq import Groq
+client = Groq(api_key="YOUR_GROQ_API_KEY")
+completion = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+print(completion.choices[0].message.content)
+
+3. Ollama (Local & Completely Free)
+If you want to run models locally on your own hardware, use the ollama library. 
+•	Install: pip install ollama (Requires Ollama desktop app running).
+•	Code
+import ollama
+response = ollama.chat(
+    model='llama3',
+    messages=[{'role': 'user', 'content': 'Why is the sky blue?'}]
+)
+print(response['message']['content'])
+
+4. Anthropic Claude (Native SDK)
+If you decide to use Claude models later, they have a very distinct native structure. 
+•	Install: pip install anthropic
+•	Code:
+import anthropic
+client = anthropic.Anthropic(api_key="YOUR_CLAUDE_KEY")
+message = client.messages.create(
+    model="claude-3-5-sonnet-20240620",
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "Hello, Claude!"}]
+)
+print(message.content[0].text)
