@@ -1,0 +1,100 @@
+🧪 LEVEL 1 — Basic Retrieval (RAG sanity test)
+
+Use these first:
+
+“Summarize this document in 5 bullet points.”
+
+“What is the main objective of the Basel framework?”
+
+“What problem was Basel designed to address?”
+
+“Define capital adequacy according to the document.”
+
+“What are the key components discussed in this document?”
+
+👉 These confirm chunk retrieval is working.
+
+🧪 LEVEL 2 — Concept Understanding
+
+“Explain the three pillars of Basel in simple terms.”
+
+“What is Tier 1 capital?”
+
+“What is Tier 2 capital?”
+
+“What is risk-weighted asset (RWA)?”
+
+“How is capital adequacy ratio calculated?”
+
+👉 These test whether embeddings retrieve the correct definitions.
+
+🧪 LEVEL 3 — Analytical / Deep Questions
+
+“Why is Basel III considered stricter than Basel II?”
+
+“How does Basel improve financial stability?”
+
+“What weaknesses in Basel II led to Basel III?”
+
+“What role does liquidity coverage ratio play?”
+
+“How does Basel regulate credit risk?”
+
+👉 These test reasoning over multiple chunks.
+
+🧪 LEVEL 4 — Cross-Section Reasoning
+
+“Compare Basel I and Basel III.”
+
+“What are the differences between Tier 1 and Tier 2 capital?”
+
+“How do capital buffers improve resilience?”
+
+“Explain the supervisory review process.”
+
+“How does market discipline function under Basel?”
+
+👉 These test multi-chunk retrieval + synthesis.
+
+🧪 LEVEL 5 — Memory Test (Very Important)
+
+Ask in sequence:
+
+Step 1
+
+Explain the three pillars of Basel.
+
+Step 2
+
+Which pillar did you describe as focusing on supervisory review?
+
+Step 3
+
+Expand more on that pillar.
+
+If it remembers previous answers →
+🧠 Memory = Working correctly.
+
+🧪 LEVEL 6 — Advanced Classroom Demo Prompts
+
+“If a bank has ₹1000 crore in risk-weighted assets and ₹120 crore Tier 1 capital, what is its capital adequacy ratio?”
+
+“Would this bank meet Basel III requirements?”
+
+“What happens if a bank falls below minimum capital requirements?”
+
+“Explain Basel III to a non-finance student.”
+
+“Explain Basel regulations as if I am a CEO.”
+
+🧪 LEVEL 7 — Stress Test Prompts (for RAG robustness)
+
+“Quote the section that discusses liquidity risk.”
+
+“Which page discusses capital buffers?”
+
+“List all types of risks mentioned in the document.”
+
+“Does the document mention leverage ratio? Explain.”
+
+“Provide a structured outline of the document.”
