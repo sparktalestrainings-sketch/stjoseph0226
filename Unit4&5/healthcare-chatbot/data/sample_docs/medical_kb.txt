@@ -1,0 +1,60 @@
+HEALTHCARE KNOWLEDGE BASE - Sample Dataset
+
+=== MEDICATIONS ===
+
+Paracetamol (Acetaminophen)
+- Dose: 500-1000mg every 4-6 hours
+- Max: 4000mg per day
+- Use: Pain relief, fever
+- Warning: Avoid alcohol, can cause liver damage
+
+Ibuprofen
+- Dose: 200-400mg every 6-8 hours  
+- Max: 1200mg per day (OTC)
+- Use: Pain, inflammation, fever
+- Warning: Take with food, avoid if stomach ulcers
+
+=== FIRST AID ===
+
+CPR (Adult)
+1. Check responsiveness
+2. Call emergency (112/108)
+3. 30 chest compressions (5-6cm deep, 100-120/min)
+4. 2 rescue breaths
+5. Repeat 30:2 until help arrives
+
+Burns
+- Cool under water for 20 minutes
+- Do NOT use ice or butter
+- Cover with clean cloth
+- Seek medical help if large area
+
+=== CHRONIC CONDITIONS ===
+
+Type 2 Diabetes
+- Symptoms: Increased thirst, frequent urination, fatigue
+- Management: Diet, exercise, medication (Metformin)
+- Target HbA1c: <7%
+- Monitor: Blood sugar, annual eye/kidney checks
+
+Hypertension
+- Target: <130/80 mmHg
+- Lifestyle: Low sodium, exercise, weight loss
+- Medications: ACE inhibitors, ARBs, diuretics
+- Monitor: Check BP regularly
+
+=== EMERGENCY SIGNS ===
+
+Seek immediate help if:
+- Chest pain with sweating, nausea
+- Sudden severe headache ("worst ever")
+- Difficulty breathing
+- Uncontrolled bleeding
+- Loss of consciousness
+- Stroke signs: Face drooping, arm weakness, speech difficulty
+
+Emergency Numbers:
+National: 112
+Ambulance: 108
+
+DISCLAIMER: This is educational information only. Always consult qualified healthcare professionals for medical advice.
