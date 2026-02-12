@@ -137,7 +137,7 @@ def build_rag_chain(vectorstore: FAISS, llm, k: int = 5):
     # Use simple ConversationBufferMemory (more stable than WindowMemory)
     memory = ConversationBufferMemory(
         memory_key="chat_history",
-        return_messages=False,
+        return_messages=True,
         output_key="answer"
     )
     
